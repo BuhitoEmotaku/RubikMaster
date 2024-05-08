@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Barbari';
+    src: url('@/assets/static/fonts/Barbari.ttf') format('truetype');
+    /* Otros estilos de la fuente como font-weight, font-style, etc. */
+  }
+  @font-face {
+    font-family: 'aAsianNinja';
+    src: url('@/assets/static/fonts/aAsianNinja.ttf') format('truetype');
+    /* Otros estilos de la fuente como font-weight, font-style, etc. */
+  }
+
+  @font-face {
+    font-family: 'KungfooFighterDEMO';
+    src: url('@/assets/static/fonts/KungfooFighterDEMO.otf') format('opentype');
+    /* Otros estilos de la fuente como font-weight, font-style, etc. */
+  }

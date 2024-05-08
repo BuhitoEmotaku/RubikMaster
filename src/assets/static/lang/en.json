@@ -1,0 +1,221 @@
+{
+  "config": {
+  "crossColors": [
+    "White",
+    "Orange",
+    "Blue",
+    "Red",
+    "Green",
+    "Yellow"
+  ]
+},
+  "components": {
+    "topBanner": {
+      "sloganRubikMaster": "~ Believe in you, and you will achieve it ~"
+    },
+    "routes": {
+      "routesList": [
+        "Home / Algs",
+        "CsTimer",
+        "Learn Rubiks Cube"
+      ]
+    },
+    "algsTypes": {
+      "numCases": "Nº cases",
+      "infoTypesList": {
+        "f2l": {
+          "description": "First Two Layers: Method for solving the first two layers of a Rubik's Cube before solving the top layer.",
+          "cases": 42
+        },
+        "oll": {
+          "description": "Orientation of the Last Layer: Method for orienting the edges of the last layer on a Rubik's Cube.",
+          "cases": 57
+        },
+        "pll": {
+          "description": "Permutation of the Last Layer: Method for permuting the edges and corners of the last layer on a Rubik's Cube.",
+          "cases": 21
+        },
+        "coll": {
+          "description": "Corners of the Last Layer: Method for orienting the corners of the last layer on a Rubik's Cube.",
+          "cases": 40
+        },
+        "zbll": {
+          "description": "Zborowski-Bruchem Last Layer: Advanced method for solving the last layer of a Rubik's Cube in a single step.",
+          "cases": 501
+        },
+        "f2lA": {
+          "description": "F2L Advanced: Best tricks from different angles to solve f2l pairs.",
+          "cases": "?"
+        },
+        "rnIn": {
+          "description": "Random Inserts: Best tricks from different angles to insert pairs, pieces, edges, etc",
+          "cases": "?"
+        },
+        "cls": {
+          "description": "Corners Last Slot: Method for solving the last corner of the last layer and the orientation of the last layer.",
+          "cases": 32
+        }
+      }
+    }
+  },
+  "views": {
+    "homePage": {
+      "ojectiveWeb": "This website has been created to provide you with certain tools that will help you become a true Rubik's Cube Master.",
+      "welcomeTitle": "Welcome Rubik Master!",
+      "whoAmI": {
+        "content": [
+          "My name is",
+          "and I am a semi-professional Speedcuber.",
+          "I started competing in 2015 and after some rises and falls, right now I'm at my peak with sub 10 (3x3) tights overall."
+        ]
+      },
+      "whyRubikMaster": {
+        "title": "Why Rubik Master appeared?",
+        "content": [
+          "I created Rubik Master to make it easier for me to check all the algorithms I need to learn (the best ones in my opinion).",
+          "Also I think this could help more people so thats why I have made it public for all of you!"
+        ]
+      },
+      "thanksTo": {
+        "title": "This web page has been possible thanks to:",
+        "content": [
+          "CubingJS",
+          "SpeedCubeDB",
+          "VisualCube",
+          "csTimer"
+        ]
+      },
+      "enjoyBuhito": "Enjoy"
+    },
+    "algsDataView": {
+      "statsTitle": "Stats",
+      "bestSolutionTitle": "Best solution:",
+      "secondaryAlgsTitle": "Secondary Algs:",
+      "notSecondaryAlgs": "No secondary algorithms available.",
+      "numMovesTitle": "Moves:",
+      "crossColorTitle": "Cross"
+    },
+    "learnRubiksCube": {
+      "learnIntroduction": {
+        "solveRubikTitle": "How to solve a Rubik's Cube!",
+        "introText": "Before we start, I want to make it clear that solving a Rubik's cube is EASY, as long as you are willing to try your best!",
+        "tutorialsLinkDescription": "If you want to learn through tutorials, here are mine!",
+        "videosYTDescription": "Complete list on YT",
+        "moveTwistVisual": "The visualizers can be moved with your finger or mouse to see the pieces better",
+        "timeDuration": "Estimated time: 2h"
+      },
+      "part1": {
+        "title": "Step 1: One-color Cross (yellow face in this case)",
+        "warning": "ONLY FOCUS ON EDGES",
+        "objective": "The first thing we will have to do as soon as we pick up a Rubik's Cube is to make a cross of a single color.",
+        "content": [
+          "That's why we won't focus on the corners at any time, only on the edges.",
+          "We have 2 possible tricks:",
+          "Trick #1:",
+          "Create the cross intuitively.",
+          "Then, use the following 'algorithm' to place each piece of the cross correctly:",
+          "In this case, as you can see, I have changed the green piece for the red one, putting both in their correct position.",
+          "Trick #2:",
+          "We will put yellow facing down and on the top, we will look for an edge that has yellow color.",
+          "To know the color of each face, we will look at the centers of each color",
+          "Now we will find 2 cases:",
+          "Direct case:",
+          "Non-direct case:",
+          "We can use this trick with all 4 edges of the cross to form it correctly."
+        ]
+      },
+      "part2": {
+        "title": "Step 2: Yellow Corners",
+        "warning": "ONLY FOCUS ON CORNERS",
+        "objective": "Once we have the cross done, place the corners of the yellow face (bottom).",
+        "content": [
+          "To do this, we must look for a corner that contains yellow color on the top of the cube.",
+          "Once we find it, we will move the top layer to place it on top of the column where it belongs.",
+          "Next, we will position ourselves in the front with the piece on the right",
+          "Then we will apply the following algorithm as many times as necessary until the yellow color of the corner points downward:",
+          "A case where we will have to apply it 3 times for example:",
+          "As we can see, this algorithm lowers the corner we want to place in its place and therefore raises the one that was already there to the top.",
+          "We must keep this in mind since, if at any time there are no corners on the top, we would have to use the same algorithm to bring them up."
+        ]
+      },
+      "part3": {
+        "title": "Step 3: Second Layer",
+        "warning": "ONLY FOCUS ON EDGES",
+        "objective": "Complete the second layer by placing its 4 edges in place.",
+        "content": [
+          "To do this, we will have to look for one of the 4 edges that go in the second layer of the cube (there are 4) on the top of the cube",
+          "(trick: they do not contain white or yellow color)",
+          "Once we find it, we will move the top layer until the front color of the piece matches the center of its color.",
+          "We place red with red in this case for EXAMPLE",
+          "Once there, we will find 2 cases:",
+          "Insertion on the left side:",
+          "Insertion on the right side:",
+          "If there were no edges in the top position, we apply one of the two algorithms and we will find one.",
+          "Remember that any algorithm that inserts a piece removes the one that was already there!",
+          "We will repeat this with all the edges that are necessary."
+        ]
+      },
+      "part4": {
+        "title": "Step 4: Opposite Color Cross to the Chosen Face",
+        "warning": "ONLY FOCUS ON EDGES",
+        "objective": "Form a white cross on the top face.",
+        "content": [
+          "This step is very simple since we will always find 1 of 3 cases.",
+          "Remember that now we only have to focus on the edges of the top face that point UP, the corners DO NOT matter how they are.",
+          "Triangle case:",
+          "To perform this case, we will have to place the triangle on the top left and do the following:",
+          "First, we place the white triangle formed by the white edges on the top left.",
+          "We apply the following algorithm:",
+          "Dot case:",
+          "To solve this case we will have to do the following ->",
+          "Line case:",
+          "To perform this case, we will have to place the HORIZONTAL line:",
+          "We apply the following algorithm:",
+          "Once we have done any of these cases, we will have to get a white color cross.",
+          "If luckily it is already done, we won't have to do anything."
+        ]
+      },
+      "part5": {
+        "title": "Step 5: Corner Orientation",
+        "warning": "ONLY FOCUS ON CORNERS",
+        "objective": "Orient the white corners to complete the entire face.",
+        "content": [
+          "To do this case, we will have to turn the cube upside down, leaving the white face at the bottom and the yellow face on top",
+          "Next, we will have to look for a white corner at the bottom that is not oriented (White does not point down)",
+          "For that, we will move the bottom layer until leaving a misoriented piece in the BOTTOM RIGHT position.",
+          "In this case, we see that we already have one correctly oriented, so we move the bottom until finding a wrong one,",
+          "Now we orient it this way, we use: Up, left, down, right, as many times as necessary until it is placed.",
+          "In this case, I do it 4 times.",
+          "Once the yellow piece faces down, we will move the bottom part to continue looking for other misoriented pieces.",
+          "Once we find another one and place it BOTTOM RIGHT as before, we will use the same algorithm as the previous time (Up, left, down, right, as many times as necessary until it is placed)",
+          "We will repeat this with all the misoriented corners.",
+          "Complete example with several corners:"
+        ]
+      },
+      "part6": {
+        "title": "Step 6: Corner Permutation",
+        "warning": "ONLY FOCUS ON CORNERS",
+        "objective": "Permute the corners of the last layer.",
+        "content": [
+          "For this step, we will have to put the white face facing up and look for a face on the TOP that has two corners of the same color.",
+          "Once we find it, we will have to place it on the left side",
+          "This face has two orange corners. We move them to the left:",
+          "Now we perform the following algorithm:",
+          "If we do not find any face with two identical colors, we perform the same algorithm and a face with two corners of the same color will appear.",
+          "(We put it on the left and repeat the algorithm)"
+        ]
+      },
+      "part7": {
+        "title": "Step 7: Edge Permutation",
+        "warning": "ONLY FOCUS ON EDGES",
+        "objective": "Permute edges of the last layer.",
+        "content": [
+          "Finally, to finish the Rubik's Cube, we will have to look for a face that is complete in the same color and place it in front.",
+          "Once we find it, we just have to execute the following algorithm as many times as necessary:",
+          "If we do not find any, we perform the same algorithm and the face will be complete."
+        ]
+      },
+      "end" : "End!"
+    }
+  }
+}

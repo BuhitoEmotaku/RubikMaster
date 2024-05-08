@@ -1,0 +1,93 @@
+Features
+
+    Fully 3D cube visualisation
+    Cube dimensions from 1x1x1 to NxNxN
+    Algorithm support
+    Complete orientation control
+    Multiple image formats
+    Custom image size
+    Cube and facelet transparency
+    Custom colour schemes
+    Custom background colour
+    Image caching for speedy access
+    Cookie configurable variables
+
+
+To Do
+The following features/bug fixes are planned for the future (ordered by priority).
+
+    More special views added to the 'view' variable (permutation arrows for example)
+    Visualisation of other puzzles inc square-1, megaminx and pyraminx
+
+
+
+Source Code
+The source code for this script is available under the GNU Lesser General Public License at github.com/Cride5/visualcube.
+
+
+Parameters
+Variable	Description	Value Range	Default	Comment
+.	script extension	.png | .gif | .jpg | .svg | .tiff | .ico 	.svg 	The extension used in the script url dictates the format of the image generated. For example: visiting /visualcube.jpg will create a jpeg image.
+fmt	Image Format	png | gif | jpg | svg | tiff | ico 	svg 	Used as an alternative to using an image extension as above.
+pzl	Puzzle Type	1 to 10	3 	Values from N=(1 to 10) represent an NxNxN cube. Currently only regular cubes are modelled
+size	Size of generated image	0 to 1024	128	Images produced are square, so size specifies both width and height of the final image in pixels.
+view	Special View	plan|trans	  	The view parameter allows special views to facilitate interpretation of different case aspects.
+plan rotates cube to expose U face, while showing the sides of the top layer
+trans sets the cube base colour to transparent, and hides any masked or undefined faces
+stage	Stage Mask	( fl | f2l | ll | cll | ell | oll | ocll | oell | coll | ocell | wv | vh | els | cls | cmll | cross | f2l_3 | f2l_2 | f2l_sm | f2l_1 | f2b | line | 2x2x2 | 2x2x3 )-?[xyz2']* 	  	Sets parts of the cube to be masked from being coloured. The stage identifier is optionally followed by a rotation algorithm. For example: stage=cross-x2 would rotate the cross mask so that the cross appears on the U-layer rather than the D-layer
+r	Rotation Sequence	([xyz]-?[0-9][0-9]?[0-9]?)+	y45x-34 	Each entry in the sequence is an axis (x, y or z), followed by the number of degrees to rotate in a clockwise direction. Negative values are permitted. Any number of rotations is possible.
+State Definitions
+alg	Algorithm to apply	[UDLRFBudlrfbMESxyz'2 ]*	  	The system applies the algorithm to the cube and displays the resulting state.
+
+NOTE: Currently unavailable for 4x4 cubes or above
+case	Algorithm to solve case	[UDLRFBudlrfbMESxyz'2 ]*	  	The system displays the cube state which is solved by applying the algorithm (algorithm inverse).
+
+NOTE: Currently unavailable for 4x4 cubes or above
+fd	Facelet Definition	[udlrfbnot]* 	uuuuuuuuu rrrrrrrrr fffffffff ddddddddd lllllllll bbbbbbbbb 	Defines the cube state in terms of facelet positions. u stands for a 'U' facelet (and likewise with rfdlb). Defining a cube state using this method means the cube will be coloured according to the scheme defined by the sch variable. Three special characters are used to indicate the following:
+n: This is a blank face (coloured grey)
+o: This is an 'oriented' face (coloured silver)
+t: This is a transparent face, and will not appear on the cube
+fc	Facelet Colours	[ndlswyrobgmpt]* 	yyyyyyyyy rrrrrrrrr bbbbbbbbb wwwwwwwww ooooooooo ggggggggg 	Defines the cube state in terms of facelet colours, as an alternative to using fd. fc takes precedence over fd if both are defined.
+
+See the 'sch' variable below for an explanation of the colour codes.
+Cube Style
+sch	Colour Scheme 	[ndlswyrobgmp]*6
+
+OR
+
+Comma separated list containing 6x one of:
+black | dgrey | grey | silver | white | yellow | red | orange | blue | green | purple | pink | [0-9a-fA-F]*3 | [0-9a-fA-F]*6 	yrbwog 	The order of the colours specified represent the faces in this order:
+
+U R F D L B
+
+The letters used in shorthand notation map to the generic face colours as follows: n=black (noir), d=dark grey, l=light grey, s=silver (lighter grey), w=white, y=yellow, r=red, o=orange, b=blue, g=green, m=purple (magenta), p=pink, t=transparent
+
+Where longhand notation is used, 3 or 6-digit hex codes can be used to specify the exact colour. for example C80000 would be a dark red colour.
+bg	Background Colour of image	[ndlswyrobgmpt]
+
+OR
+
+black | dgrey | grey | silver | white | yellow | red | orange | blue | green | purple | pink | [0-9a-fA-F]*3 | [0-9a-fA-F]*6 	white	The value t represents transparent, and is only valid for png and gif images.
+cc	Cube Colour	see above	black	This is the cube's base colour.
+co	Cube Opacity	0 to 99	100 	Setting this value causes the base cube to be transparent. It means facelets at the back of the cube will also be rendered. A value of 0 gives complete transparency.
+fo	Facelet Opacity	0 to 99	100 	Setting this value causes the facelets to be rendered with transparency.
+dist	Projection Distance	1 to 100	5 	Controls the distance of the cube from the perspective of the viewer.
+Added Features
+arw	Arrow Definition 	Comma separated list in the form:
+
+<a_from><a_to>(<a_via>)?(-i[0-9+])?(-s[0-9+])?(-<colour>)?
+
+Where <a_x> is: [URFDLB][0-9]+
+
+And: <colour> is as defined in the 'sch' variable. 	-i10-s10 	Defines a list of arrows to be drawn on the cube.
+
+Each arrow is defined with a minimum of two sticker identifiers to indicate where it should be drawn from and to. The optional third sticker identifier indicates which sticker it should pass through if a curved arrow is to be drawn. Arrows may be scaled so that they fall short, or past the centre of each facelet by specifying the s (scale) parameter after a dash. Where curved arrows are drawn the degree to which the arrow deviates from a straight path can be specified via the i (influence) parameter. Arrows may also optionally be assigned individual colours, by using a - followed by a colour code.
+
+Example:   arw=U0U2,U2U8,U8U0,R6R2R0-s8-i5-yellow
+
+The above example draws 4 arrows. The first three use default colour and scale and point to stickers on the U-face. The fourth arrow points from sticker #6 to sticker #2 on the R-face, and is curved so that it passes through sticker #0. The arrow is slightly shortened to 8/10 of its full length, and the influence of the pass through sticker in generating the curve is set to 5/10.
+ac	Default Arrow Colour	[ndlswyrobgmp]
+
+OR
+
+black | dgrey | grey | silver | white | yellow | red | orange | blue | green | purple | pink | [0-9a-fA-F]*3 | [0-9a-fA-F]*6 	grey	Arrows will be this colour by default, unless overridden by a colour specified for each arrow in the arw variable.

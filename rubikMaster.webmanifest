@@ -1,0 +1,11 @@
+{
+  "name": "RubikMaster",
+  "short_name": "RubikMaster",
+  "description": "Una aplicación para entrenar y aprender con el cubo de Rubik.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "scope": "/",
+  "orientation": "any"
+}

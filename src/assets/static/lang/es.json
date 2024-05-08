@@ -1,0 +1,221 @@
+{
+  "config": {
+    "crossColors": [
+      "Blanco",
+      "Naranja",
+      "Azul",
+      "Rojo",
+      "Verde",
+      "Amarillo"
+    ]
+  },
+  "components": {
+    "topBanner": {
+      "sloganRubikMaster": "~ Cree en ti, y lo lograrás..! ~"
+    },
+    "routes": {
+      "routesList": [
+        "Inicio / Algoritmos",
+        "CsTimer",
+        "Aprender Cubo de Rubik"
+      ]
+    },
+    "algsTypes": {
+      "numCases": "N.º de casos",
+      "infoTypesList": {
+        "f2l": {
+          "description": "First Two Layers: Método para resolver las dos primeras capas de un cubo de Rubik antes de resolver la capa superior.",
+          "cases": 42
+        },
+        "oll": {
+          "description": "Orientation of the Last Layer: Método para orientar las aristas de la última capa en un cubo de Rubik.",
+          "cases": 57
+        },
+        "pll": {
+          "description": "Permutation of the Last Layer: Método para permutar las aristas y esquinas de la última capa en un cubo de Rubik.",
+          "cases": 21
+        },
+        "coll": {
+          "description": "Corners of the Last Layer: Método para orientar las esquinas de la última capa en un cubo de Rubik.",
+          "cases": 40
+        },
+        "zbll": {
+          "description": "Zborowski-Bruchem Last Layer: Método avanzado para resolver la última capa de un cubo de Rubik en un solo paso.",
+          "cases": 501
+        },
+        "f2lA": {
+          "description": "F2L Avanzado: Los mejores trucos desde diferentes ángulos para resolver pares F2L.",
+          "cases": "?"
+        },
+        "rnIn": {
+          "description": "Inserciones Aleatorias: Los mejores trucos desde diferentes ángulos para insertar pares, piezas, bordes, etc.",
+          "cases": "?"
+        },
+        "cls": {
+          "description": "Corners Last Slot: Método para resolver la última esquina de la última capa y la orientación de la última capa.",
+          "cases": 32
+        }
+      }
+    }
+  },
+  "views": {
+    "homePage": {
+      "ojectiveWeb": "Esta página web ha sido creada para proporcionarte ciertas herramientas que te ayudarán a convertirte en un verdadero Maestro del Cubo de Rubik.",
+      "welcomeTitle": "¡Bienvenido a Rubik Master!",
+      "whoAmI": {
+        "content": [
+          "Mi nombre es",
+          "y soy un Speedcuber semi-profesional.",
+          "Comencé a competir en 2015 y después de algunos altibajos, ahora mismo estoy en mi mejor momento con tiempos sub 10 (3x3) en general."
+        ]
+      },
+      "whyRubikMaster": {
+        "title": "¿Por qué apareció Rubik Master?",
+        "content": [
+          "He creado Rubik Master para facilitarme la tarea de revisar todos los algoritmos que necesitaba aprender (los mejores en mi opinión).",
+          "También creo que esto podría ayudar a más personas, ¡así que por eso lo he hecho público para todos vosotros!"
+        ]
+      },
+      "thanksTo": {
+        "title": "Esta página web ha sido posible gracias a:",
+        "content": [
+          "CubingJS",
+          "SpeedCubeDB",
+          "VisualCube",
+          "csTimer"
+        ]
+      },
+      "enjoyBuhito": "¡Disfruta!"
+    },
+    "algsDataView": {
+      "statsTitle": "Estadísticas",
+      "bestSolutionTitle": "Mejor solución:",
+      "secondaryAlgsTitle": "Algoritmos secundarios:",
+      "notSecondaryAlgs": "No hay algoritmos secundarios disponibles.",
+      "numMovesTitle": "Movimientos:",
+      "crossColorTitle": "Cruz"
+    },
+    "learnRubiksCube": {
+      "learnIntroduction": {
+        "solveRubikTitle": "¡Cómo resolver un Cubo de Rubik!",
+        "introText": "Antes de comenzar, quiero dejar claro que resolver un Cubo de Rubik es FÁCIL, siempre y cuando estés dispuesto a intentarlo con todas tus ganas.",
+        "tutorialsLinkDescription": "Si quieres aprender mediante tutoriales, ¡aquí tienes los míos!",
+        "videosYTDescription": "Lista completa en YouTube",
+        "moveTwistVisual": "Los visualizadores se pueden mover con el dedo o el ratón para ver mejor las piezas.",
+        "timeDuration": "Tiempo estimado: 2 horas"
+      },
+      "part1": {
+        "title": "Paso 1: Cruz de un color (cara amarilla en este caso)",
+        "warning": "SOLO FIJARSE EN ARISTAS",
+        "objective": "Lo primero que debemos hacer al coger un Cubo de Rubik es formar una cruz de un solo color.",
+        "content": [
+          "Por eso, en ningún momento nos fijaremos en las esquinas, solo en las aristas.",
+          "Tenemos 2 trucos posibles:",
+          "Truco #1:",
+          "Crear la cruz de forma intuitiva.",
+          "Luego, usar el siguiente 'algoritmo' para colocar cada pieza de la cruz en su lugar:",
+          "En este caso, como puedes ver, he cambiado la pieza verde por la roja, colocando ambas en su posición correcta.",
+          "Truco #2:",
+          "Colocar amarillo mirando hacia abajo y en la parte superior, buscar una arista que tenga color amarillo.",
+          "Para saber el color de cada cara, nos fijamos en los centros de cada color.",
+          "Ahora encontraremos 2 casos:",
+          "Caso directo:",
+          "Caso no directo:",
+          "Podemos usar este truco con las 4 aristas de la cruz para formarla correctamente."
+        ]
+      },
+      "part2": {
+        "title": "Paso 2: Esquinas Amarillas",
+        "warning": "SOLO FIJARSE EN ESQUINAS",
+        "objective": "Una vez tengamos la cruz hecha, colocar las esquinas de la cara amarilla (inferior).",
+        "content": [
+          "Para ello debemos buscar una esquina que contenga el color amarillo en la parte superior del cubo.",
+          "Una vez la encontremos, moveremos la capa superior para colocarla encima de la columna donde va situada.",
+          "Luego, nos colocaremos en el frente con la pieza a la derecha.",
+          "Luego aplicaremos el siguiente algoritmo tantas veces como sea necesario hasta que el color amarillo de la esquina apunte hacia abajo:",
+          "Un caso donde tendremos que aplicarlo 3 veces, por ejemplo:",
+          "Como puedes ver, este algoritmo baja la esquina que queremos colocar en su lugar y sube la que ya estaba en la parte superior.",
+          "Esto es importante tenerlo en cuenta, ya que si en algún momento no hubiera esquinas en la parte superior, tendríamos que usar el mismo algoritmo para hacerlas subir."
+        ]
+      },
+      "part3": {
+        "title": "Paso 3: Segunda Capa",
+        "warning": "SOLO FIJARSE EN ARISTAS",
+        "objective": "Colocar las 4 aristas de la segunda capa en su lugar.",
+        "content": [
+          "Para ello debemos buscar una de las 4 aristas de la segunda capa del cubo (son 4) en la parte superior del cubo",
+          "(truco: no contienen color blanco o amarillo)",
+          "Una vez la encontremos, moveremos la capa superior hasta que coincida el color del frente de la pieza con el centro de su color.",
+          "Colocamos en este caso rojo con rojo por EJEMPLO",
+          "Una vez allí, encontraremos 2 casos:",
+          "Inserción en el lado izquierdo:",
+          "Inserción en el lado derecho:",
+          "Si no hubiera ninguna arista en la posición superior, aplicamos uno de los dos algoritmos y encontraremos una.",
+          "Recuerda que todo algoritmo que inserta una pieza cual sea, saca la que ya estaba.",
+          "Esto lo repetiremos con todas las que sean necesarias."
+        ]
+      },
+      "part4": {
+        "title": "Paso 4: Cruz color opuesto a la cara elegida",
+        "warning": "SOLO FIJARSE EN ARISTAS",
+        "objective": "Formar una cruz blanca en la parte superior.",
+        "content": [
+          "Este paso es muy sencillo ya que siempre encontraremos 1 de 3 casos.",
+          "Recuerda que ahora solo nos fijamos en las aristas de la parte superior que miran hacia ARRIBA, las esquinas NO importan cómo estén.",
+          "Caso de triángulo:",
+          "Para este caso, debemos colocar el triángulo arriba a la izquierda y hacer lo siguiente:",
+          "Primero colocamos el triángulo blanco que forman las aristas blancas arriba a la izquierda.",
+          "Aplicamos el siguiente algoritmo:",
+          "Caso de punto:",
+          "Para resolver este caso debemos hacer lo siguiente:",
+          "Caso de línea:",
+          "Para este caso, debemos colocar la línea HORIZONTAL:",
+          "Aplicamos el siguiente algoritmo:",
+          "Una vez hayamos realizado alguno de estos casos, debemos obtener una cruz de color blanco.",
+          "Si por suerte ya está hecha, no tendremos que hacer nada."
+        ]
+      },
+      "part5": {
+        "title": "Paso 5: Orientación de esquinas",
+        "warning": "SOLO FIJARSE EN ESQUINAS",
+        "objective": "Orientar las esquinas blancas para completar la cara completa.",
+        "content": [
+          "Para hacer esto, daremos la vuelta al cubo dejando la cara blanca en la parte de abajo y la amarilla en la parte superior.",
+          "Luego buscaremos una esquina blanca en la parte de abajo que no esté orientada (el blanco no apunta abajo).",
+          "Para eso, moveremos la parte de abajo hasta dejar una pieza mal orientada en la posición ABAJO DERECHA.",
+          "En este caso, vemos que tenemos una ya bien orientada, por lo que movemos la parte de abajo hasta encontrar otra mal orientada,",
+          "Luego la orientamos de esta forma, usando: Arriba, izquierda, abajo, derecha, tantas veces como sea necesario hasta colocarla.",
+          "En este caso, lo hago 4 veces.",
+          "Una vez la pieza amarilla mire hacia abajo, moveremos la parte inferior para seguir buscando otras mal orientadas.",
+          "Una vez encontremos otra y la pongamos ABAJO DERECHA como antes, usaremos el mismo algoritmo de la vez anterior (Arriba, izquierda, abajo, derecha, tantas veces como sea necesario hasta colocarla)",
+          "Repetiremos esto con todas las esquinas desorientadas.",
+          "Ejemplo completo con varias esquinas:"
+        ]
+      },
+      "part6": {
+        "title": "Paso 6: Permutación de esquinas",
+        "warning": "SOLO FIJARSE EN ESQUINAS",
+        "objective": "Permutar las esquinas de la última capa.",
+        "content": [
+          "Para este paso, debemos colocar la cara blanca mirando hacia arriba y buscar en la parte SUPERIOR una cara que tenga dos esquinas del mismo color.",
+          "Una vez la encontremos, la colocaremos en el lado izquierdo.",
+          "Esta cara tiene dos esquinas de color naranja iguales. Las movemos a la izquierda:",
+          "Luego realizamos el siguiente algoritmo:",
+          "Si no encontramos ninguna cara con dos colores iguales, realizamos el mismo algoritmo y aparecerá una cara con dos esquinas del mismo color.",
+          "(La ponemos a la izquierda y repetimos el algoritmo)"
+        ]
+      },
+      "part7": {
+        "title": "Paso 7: Permutación de aristas",
+        "warning": "SOLO FIJARSE EN ARISTAS",
+        "objective": "Permutar las aristas de la última capa.",
+        "content": [
+          "Finalmente, para completar el Cubo de Rubik, debemos buscar una cara que esté completa del mismo color y colocarla al frente.",
+          "Una vez la encontremos, simplemente debemos ejecutar el siguiente algoritmo tantas veces como sea necesario:",
+          "Si no encontramos ninguna, realizamos el mismo algoritmo y la cara estará completa."
+        ]
+      },
+      "end": "¡Fin!"
+    }
+  }
+}

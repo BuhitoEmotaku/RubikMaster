@@ -1,0 +1,191 @@
+/* color palette from <https://github.com/vuejs/theme> */
+@import url('../assets/styles/fonts.css');
+
+/* ---------- DARK ROOT ---------- */
+:root {
+
+  --color-backgroundDark: rgb(0, 0, 0);
+  --colorMainDark: white;
+  --colorOverlappingDark: #131313;
+
+  --colorSpecialText1Dark: yellow;
+  --inverseColorMainDark: white;
+  --backgroundGradient1Dark: linear-gradient(to right, rgb(28, 28, 28), #111111, rgb(28, 28, 28));
+
+
+  --outlineContentDark: 2px solid #7ee8cc;
+
+  --color-backgroundHeaderDark: #000000d4;
+
+  --color-titleMusic-statsDark: #fc0;
+
+  --color-backgroundChatSkeletonDark: #000000;
+  --color-backgroundChatDark:  #0f0f0f;
+  --color-backgroundChatHoverDark: #0d0d0d;
+
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+  
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+
+  
+  /*4px solid #34f2ff;*/
+  
+}
+
+/* ---------- LIGHT ROOT ---------- */
+:root {
+
+  --color-backgroundLight: rgba(119, 119, 119, 0.96);
+  --colorMainLight: rgb(0, 0, 0);
+  --colorOverlappingLight: #acacac;
+
+  --colorSpecialText1Light: black;
+  --inverseColorMainLight: white;
+
+  --color-transparentLight: #90249d82;
+
+  --backgroundGradient1Light: linear-gradient(to right, rgb(255, 255, 255), #111, rgb(249, 249, 249));
+
+  
+
+  --outlineContentLight: 2px solid rgb(89, 1, 50);
+  
+  --color-backgroundHeaderLight: rgba(253, 156, 170, 0.53);
+
+  --color-titleMusic-statsLight: #4507ff;
+
+  --color-backgroundChatSkeletonLight: #603459;
+  --color-backgroundChatLight:  #b08898;
+  --color-backgroundChatHoverLight: #f093b9;
+
+  
+
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+
+  /*4px solid #34f2ff;*/
+  
+}
+
+
+[theme="dark"] {
+    --color-backgroundMain: var(--color-backgroundDark);
+    --color-colorMain: var(--colorMainDark);
+    --color-backgroundOverlapping: var(--colorOverlappingDark);
+
+    --color-specialText1: var(--colorSpecialText1Dark);
+    --color-inverseColorMain: var(--inverseColorMainDark);
+    --color-backgroundGradient1: var(--backgroundGradient1Dark);
+
+    --outlineContent: var(--outlineContentDark);
+
+    --color-backgroundHeader: var(--color-backgroundHeaderDark);
+
+    --color-titleMusic-stats: var(--color-titleMusic-statsDark);
+
+    --color-backgroundChatSkeleton: var(--color-backgroundChatSkeletonDark);
+    --color-backgroundChat:  var(--color-backgroundChatDark);
+    --color-backgroundChatHover: var(--color-backgroundChatHoverDark);
+    
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: #111111;
+}
+
+[theme="light"] {
+    --color-backgroundMain: var(--color-backgroundLight);
+    --color-colorMain: var(--colorMainLight);
+    --color-backgroundOverlapping: var(--colorOverlappingLight);
+    
+    --color-specialText1: var(--colorSpecialText1Light);
+
+    --color-inverseColorMain: var(--inverseColorMainLight);
+
+    --color-backgroundGradient1: var(--backgroundGradient1Light);
+
+
+
+    --outlineContent: var(--outlineContentLight);
+
+    --color-backgroundHeader: var(--color-backgroundHeaderLight);
+
+    --color-titleMusic-stats: var(--color-titleMusic-statsLight);
+
+    --color-backgroundChatSkeleton: var(--color-backgroundChatSkeletonLight);
+    --color-backgroundChat:  var(--color-backgroundChatLight);
+    --color-backgroundChatHover: var(--color-backgroundChatHoverLight);
+
+    --color-background: var(--vt-c-white);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: #cecdcd;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-color: rgb(45, 45, 45) rgb(100, 100, 100);
+  scrollbar-width: thin;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  cursor: url('./cursor.png'), pointer;
+  max-height: 100vh;
+  margin: 0;
+  background-color: var(--color-backgroundMain);
+  color: var(--color-colorMain);
+  transition:
+    color 0.5s,
+    background-color 0.6s;
+  line-height: 1.6;
+  font-family:
+    'Barbari',
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 17px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}

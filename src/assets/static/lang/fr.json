@@ -1,0 +1,221 @@
+{
+  "config": {
+    "crossColors": [
+      "Blanc",
+      "Orange",
+      "Bleu",
+      "Rouge",
+      "Vert",
+      "Jaune"
+    ]
+  },
+  "components": {
+    "topBanner": {
+      "sloganRubikMaster": "~ Crois en toi, et tu réussiras..! ~"
+    },
+    "routes": {
+      "routesList": [
+        "Accueil / Algorithmes",
+        "CsTimer",
+        "Apprendre le Rubik's Cube"
+      ]
+    },
+    "algsTypes": {
+      "numCases": "N.º de cas",
+      "infoTypesList": {
+        "f2l": {
+          "description": "First Two Layers : Méthode pour résoudre les deux premières couches d'un Rubik's Cube avant de résoudre la couche supérieure.",
+          "cases": 42
+        },
+        "oll": {
+          "description": "Orientation of the Last Layer : Méthode pour orienter les arêtes de la dernière couche d'un Rubik's Cube.",
+          "cases": 57
+        },
+        "pll": {
+          "description": "Permutation of the Last Layer : Méthode pour permuter les arêtes et les coins de la dernière couche d'un Rubik's Cube.",
+          "cases": 21
+        },
+        "coll": {
+          "description": "Corners of the Last Layer : Méthode pour orienter les coins de la dernière couche d'un Rubik's Cube.",
+          "cases": 40
+        },
+        "zbll": {
+          "description": "Zborowski-Bruchem Last Layer : Méthode avancée pour résoudre la dernière couche d'un Rubik's Cube en une seule étape.",
+          "cases": 501
+        },
+        "f2lA": {
+          "description": "F2L Avancé : Les meilleures astuces sous différents angles pour résoudre les paires F2L.",
+          "cases": "?"
+        },
+        "rnIn": {
+          "description": "Insertions Aléatoires : Les meilleures astuces sous différents angles pour insérer des paires, des pièces, des arêtes, etc.",
+          "cases": "?"
+        },        
+        "cls": {
+          "description": "Corners Last Slot : Méthode pour résoudre le dernier coin de la dernière couche et l'orientation de la dernière couche.",
+          "cases": 32
+        }
+      }
+    }
+  },
+  "views": {
+    "homePage": {
+      "ojectiveWeb": "Ce site Web a été créé pour vous fournir certains outils qui vous aideront à devenir un véritable Maître du Rubik's Cube.",
+      "welcomeTitle": "Bienvenue Maître Rubik !",
+      "whoAmI": {
+        "content": [
+          "Mon nom est",
+          "et je suis un Speedcuber semi-professionnel.",
+          "J'ai commencé à concourir en 2015 et après quelques hauts et bas, je suis actuellement dans ma meilleure période avec des temps sous les 10 secondes (3x3) en général."
+        ]
+      },
+      "whyRubikMaster": {
+        "title": "Pourquoi Rubik Master est-il apparu ?",
+        "content": [
+          "J'ai créé Rubik Master pour faciliter la tâche de révision de tous les algorithmes que je devais apprendre (les meilleurs à mon avis).",
+          "Je pense aussi que cela pourrait aider plus de personnes, c'est pourquoi je l'ai rendu public pour vous tous !"
+        ]
+      },
+      "thanksTo": {
+        "title": "Ce site Web a été rendu possible grâce à :",
+        "content": [
+          "CubingJS",
+          "SpeedCubeDB",
+          "VisualCube",
+          "csTimer"
+        ]
+      },
+      "enjoyBuhito": "Profitez-en !"
+    },
+    "algsDataView": {
+      "statsTitle": "Statistiques",
+      "bestSolutionTitle": "Meilleure solution :",
+      "secondaryAlgsTitle": "Algorithmes secondaires :",
+      "notSecondaryAlgs": "Aucun algorithme secondaire disponible.",
+      "numMovesTitle": "Mouvements :",
+      "crossColorTitle": "Croix"
+    },
+    "learnRubiksCube": {
+      "learnIntroduction": {
+        "solveRubikTitle": "Comment résoudre un Rubik's Cube !",
+        "introText": "Avant de commencer, je tiens à préciser que résoudre un Rubik's Cube est FACILE, tant que vous êtes prêt à le faire avec tout votre cœur.",
+        "tutorialsLinkDescription": "Si vous souhaitez apprendre grâce à des tutoriels, voici les miens !",
+        "videosYTDescription": "Liste complète sur YouTube",
+        "moveTwistVisual": "Les visualiseurs peuvent être déplacés avec le doigt ou la souris pour mieux voir les pièces.",
+        "timeDuration": "Temps estimé : 2 heures"
+      },
+      "part1": {
+        "title": "Étape 1 : Croix d'une couleur (face jaune dans ce cas)",
+        "warning": "SEULEMENT LES ARÊTES SONT CONCERNÉES",
+        "objective": "La première chose à faire en prenant un Rubik's Cube est de former une croix d'une seule couleur.",
+        "content": [
+          "Pour cela, nous ne nous concentrerons à aucun moment sur les coins, seulement sur les arêtes.",
+          "Nous avons 2 astuces possibles :",
+          "Astuce n°1 :",
+          "Créer la croix de manière intuitive.",
+          "Ensuite, utiliser l'« algorithme » suivant pour placer chaque pièce de la croix à sa place :",
+          "Dans ce cas, comme vous pouvez le voir, j'ai remplacé la pièce verte par la rouge, plaçant les deux à leur emplacement correct.",
+          "Astuce n°2 :",
+          "Placer le jaune en bas et chercher une arête ayant une couleur jaune en haut.",
+          "Pour connaître la couleur de chaque face, nous regardons les centres de chaque couleur.",
+          "Maintenant, nous trouverons 2 cas :",
+          "Cas direct :",
+          "Cas non direct :",
+          "Nous pouvons utiliser cette astuce avec les 4 arêtes de la croix pour la former correctement."
+        ]
+      },
+      "part2": {
+        "title": "Étape 2 : Coins Jaunes",
+        "warning": "SEULEMENT LES COINS SONT CONCERNÉS",
+        "objective": "Une fois la croix formée, placer les coins de la face jaune (inférieure).",
+        "content": [
+          "Pour cela, nous devons rechercher un coin contenant la couleur jaune sur le dessus du cube.",
+          "Une fois trouvé, nous déplacerons la couche supérieure pour le placer au-dessus de la colonne où il doit être.",
+          "Ensuite, nous nous positionnerons en face avec la pièce à droite.",
+          "Ensuite, appliquez l'« algorithme » suivant autant de fois que nécessaire jusqu'à ce que la couleur jaune du coin pointe vers le bas :",
+          "Un exemple où nous devrons l'appliquer 3 fois, par exemple :",
+          "Comme vous pouvez le voir, cet algorithme descend le coin que nous voulons placer à sa place et monte celui qui était déjà en haut.",
+          "Il est important de noter cela, car s'il n'y avait pas de coins en haut à un moment donné, nous devrions utiliser le même algorithme pour les faire monter."
+        ]
+      },
+      "part3": {
+        "title": "Étape 3 : Deuxième Couche",
+        "warning": "SEULEMENT LES ARÊTES SONT CONCERNÉES",
+        "objective": "Placer les 4 arêtes de la deuxième couche à leur place.",
+        "content": [
+          "Pour cela, nous devons rechercher l'une des 4 arêtes de la deuxième couche du cube (il y en a 4) sur le dessus du cube",
+          "(astuce : elles ne contiennent ni blanc ni jaune)",
+          "Une fois trouvée, nous déplacerons la couche supérieure jusqu'à ce que la couleur de la face de la pièce corresponde au centre de sa couleur.",
+          "Dans ce cas, nous plaçons le rouge avec le rouge par EXEMPLE",
+          "Une fois là, nous rencontrerons 2 cas :",
+          "Insertion à gauche :",
+          "Insertion à droite :",
+          "S'il n'y avait aucune arête à la position supérieure, nous appliquons l'un des deux algorithmes et nous en trouverons une.",
+          "N'oubliez pas que tout algorithme insérant une pièce quelconque en retire une autre.",
+          "Nous répéterons cela avec toutes celles qui sont nécessaires."
+        ]
+      },
+      "part4": {
+        "title": "Étape 4 : Croix de couleur opposée à la face choisie",
+        "warning": "SEULEMENT LES ARÊTES SONT CONCERNÉES",
+        "objective": "Former une croix blanche sur le dessus.",
+        "content": [
+          "Cette étape est très simple car nous trouverons toujours 1 des 3 cas.",
+          "N'oubliez pas que maintenant nous ne nous concentrons que sur les arêtes du dessus qui pointent vers le HAUT, les coins n'ont pas d'importance.",
+          "Cas de triangle :",
+          "Pour ce cas, nous devons placer le triangle en haut à gauche et faire ce qui suit :",
+          "Tout d'abord, nous plaçons le triangle blanc formé par les arêtes blanches en haut à gauche.",
+          "Appliquez l'« algorithme » suivant :",
+          "Cas de point :",
+          "Pour résoudre ce cas, nous devons faire ce qui suit :",
+          "Cas de ligne :",
+          "Pour ce cas, nous devons placer la ligne HORIZONTALEMENT :",
+          "Appliquez l'« algorithme » suivant :",
+          "Une fois que nous avons réalisé l'un de ces cas, nous devons obtenir une croix blanche.",
+          "Si par chance elle est déjà faite, nous n'aurons rien à faire."
+        ]
+      },
+      "part5": {
+        "title": "Étape 5 : Orientation des coins",
+        "warning": "SEULEMENT LES COINS SONT CONCERNÉS",
+        "objective": "Orienter les coins blancs pour compléter la face complète.",
+        "content": [
+          "Pour ce faire, nous allons retourner le cube avec le côté blanc en bas et le jaune en haut.",
+          "Ensuite, nous rechercherons un coin blanc en bas qui n'est pas orienté (le blanc ne pointe pas vers le bas).",
+          "Pour cela, nous déplacerons le bas jusqu'à ce qu'une pièce mal orientée soit en position BAS DROITE.",
+          "Dans ce cas, nous voyons que nous en avons déjà un bien orienté, donc nous déplaçons le bas jusqu'à en trouver un autre mal orienté,",
+          "Ensuite, nous l'orientons de cette manière en utilisant : Haut, gauche, bas, droite, autant de fois que nécessaire pour le placer.",
+          "Dans ce cas, je le fais 4 fois.",
+          "Une fois que la pièce jaune pointe vers le bas, nous déplacerons le bas pour continuer à chercher d'autres pièces mal orientées.",
+          "Une fois que nous en trouvons un autre et que nous le plaçons en BAS DROITE comme précédemment, nous utiliserons le même algorithme que la fois précédente (Haut, gauche, bas, droite, autant de fois que nécessaire pour le placer)",
+          "Nous répéterons cela avec tous les coins mal orientés.",
+          "Exemple complet avec plusieurs coins :"
+        ]
+      },
+      "part6": {
+        "title": "Étape 6 : Permutation des coins",
+        "warning": "SEULEMENT LES COINS SONT CONCERNÉS",
+        "objective": "Permuter les coins de la dernière couche.",
+        "content": [
+          "Pour cette étape, nous devons placer le côté blanc en haut et rechercher sur le DESSUS un côté ayant deux coins de la même couleur.",
+          "Une fois trouvé, nous le placerons à gauche.",
+          "Ce côté a deux coins de couleur orange identiques. Nous les déplaçons à gauche :",
+          "Ensuite, nous appliquons l'« algorithme » suivant :",
+          "Si nous ne trouvons aucun côté avec deux couleurs identiques, nous appliquons le même algorithme et un côté avec deux coins de la même couleur apparaîtra.",
+          "(Nous le plaçons à gauche et répétons l'algorithme)"
+        ]
+      },
+      "part7": {
+        "title": "Étape 7 : Permutation des arêtes",
+        "warning": "SEULEMENT LES ARÊTES SONT CONCERNÉES",
+        "objective": "Permuter les arêtes de la dernière couche.",
+        "content": [
+          "Enfin, pour compléter le Rubik's Cube, nous devons rechercher un côté complet de la même couleur et le placer à l'avant.",
+          "Une fois trouvé, nous devons simplement exécuter l'« algorithme » suivant autant de fois que nécessaire :",
+          "Si nous n'en trouvons aucun, nous appliquons le même algorithme et le côté sera complet."
+        ]
+      },
+      "end": "Fin !"
+    }
+  }
+}
